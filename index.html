@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="掲示板　テスト">
+    <title>掲示板|ocean</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="src/css/style.css">
+    <link href="fontawesome-free-5.9.0-web/css/all.css" rel="stylesheet">
+</head>
+
+<body>
+<!-- Elementは要素　　text title ... Modifierは構成　色とか大きさ-->
+<main class="">
+    <header id="l-header">
+        <div class="header--container">
+            <a href="index.html">
+                <h1 class="header--title">Ocean!</h1>
+            </a>
+        </div>
+    </header>
+    <section id="l-board">
+
+        <board-list v-for="list in lists"
+                    v-bind:name="list.name"
+                    v-bind:text="list.text"
+                    v-bind:date="list.date">
+        </board-list>
+
+        <!--    モーダル-->
+        <div class="c-modal-cover active--modal">
+            <board-form v-on:input="send"></board-form>
+        </div>
+
+    </section>
+
+    <span id="fab" class="js-fbaBtn">
+        <i class="fas fa-plus"></i>
+    </span>
+</main>
+<script src="dist/js/bundle.js"></script>
+</body>
+</html>

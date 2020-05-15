@@ -1,0 +1,206 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+html {
+  font-size: 62.5%; }
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: "Avenir", "Helvetica Neue", "Helvetica", "Arial", "Hiragino Sans", "ヒラギノ角ゴシック", YuGothic, "Yu Gothic", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  line-height: 1.6;
+  color: #242727;
+  text-size-adjust: 100%;
+  letter-spacing: 0.1em;
+  scroll-behavior: smooth; }
+
+a {
+  text-decoration: none;
+  color: #242727; }
+
+a:hover {
+  transition: .3s;
+  text-decoration: none; }
+
+img {
+  width: 100%;
+  height: 100%; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%; }
+
+#l-header {
+  background: #58a4de;
+  height: 40px; }
+
+.header--container {
+  margin-left: 15px;
+  margin-right: 15px; }
+
+.header--title {
+  font-size: 2.5em;
+  font-family: 'Fugaz One', cursive; }
+
+#l-board {
+  width: 980px;
+  margin: 0 auto; }
+  @media screen and (max-width: 1200px) {
+    #l-board {
+      width: 600px; } }
+  @media screen and (max-width: 1200px) and (max-width: 768px) {
+    #l-board {
+      width: 500px; } }
+  @media screen and (max-width: 1200px) and (max-width: 414px) {
+    #l-board {
+      width: 100%; } }
+
+.c-board--container {
+  background: #a0d8ef;
+  color: #4472a7;
+  height: auto;
+  border-radius: 3px;
+  margin: 5px;
+  padding: 10px 15px; }
+  .c-board--container__name {
+    font-size: 1.6em;
+    font-weight: 700; }
+  .c-board--container--text {
+    font-size: 1em; }
+
+#fab {
+  /*円の部分*/
+  display: block;
+  width: 56px;
+  /*幅*/
+  height: 56px;
+  /*高さ*/
+  background: #192b50;
+  /*背景色*/
+  text-align: center;
+  /*中央寄せ*/
+  border-radius: 50%;
+  /*角丸く*/
+  transition: .3s;
+  /*滑らかな動きに*/
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 2px 2px 0 rgba(0, 0, 0, 0.24);
+  /*影*/
+  position: fixed;
+  top: 85%;
+  left: 80%; }
+
+#fab:hover {
+  /*ホバー時*/
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2); }
+
+#fab i {
+  /*中央のアイコン*/
+  color: white;
+  line-height: 56px;
+  /*＝幅と高さ*/
+  font-size: 18px;
+  /*サイズ*/ }
+
+.active--modal {
+  display: none; }
+
+.c-modal-cover {
+  background: rgba(78, 78, 78, 0.6);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0; }
+
+.c-modal {
+  background: #6c9bd2;
+  width: 700px;
+  height: 400px;
+  padding: 20px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto; }
+  @media screen and (max-width: 414px) {
+    .c-modal {
+      width: 300px; } }
+  .c-modal__btn {
+    display: inline-block;
+    padding: 0.3em 1em;
+    text-decoration: none;
+    border-radius: 3px;
+    font-weight: 600;
+    margin-bottom: 10px; }
+    .c-modal__btn--cancel {
+      color: #192b50;
+      border: solid 3px #192b50;
+      background: #6c9bd2; }
+    .c-modal__btn--send {
+      color: #ffffff;
+      border: solid 3px #192b50;
+      background: #0d2c52;
+      float: right; }
+  .c-modal__name {
+    width: 100%;
+    display: block;
+    background: #deedff;
+    border: solid 2px #6c9bd2;
+    font-size: 2em;
+    color: #0d1f26;
+    box-sizing: border-box; }
+  .c-modal__textarea {
+    width: 100%;
+    height: 80%;
+    display: block;
+    background: #deedff;
+    border: solid 2px #6c9bd2;
+    font-size: 2em;
+    color: #0d1f26;
+    resize: none;
+    box-sizing: border-box; }

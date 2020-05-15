@@ -1,0 +1,17 @@
+.c-board--container {
+  background: $main-background;
+  color: $board-font-color;
+  height: auto;
+  border-radius: 3px;
+  margin: 5px;
+  padding: 10px 15px;
+  &__name {
+    font-size: 1.6em;
+    font-weight: 700;
+  }
+
+  &--text {
+    font-size: 1em;
+  }
+}
+

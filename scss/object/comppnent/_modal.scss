@@ -1,0 +1,68 @@
+.active--modal{
+  display: none;
+}
+.c-modal-cover{
+  background: rgba(78,78,78,.6);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.c-modal{
+  background: #6c9bd2;
+  width: 700px;
+  height: 400px;
+  padding: 20px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+@include sumaho(){
+  width: 300px;
+}
+
+  &__btn{
+    display: inline-block;
+    padding: 0.3em 1em;
+    text-decoration: none;
+    border-radius: 3px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    &--cancel{
+      color: #192b50;
+      border: solid 3px #192b50;
+      background: #6c9bd2;
+    }
+    &--send{
+      color: #ffffff;
+      border: solid 3px #192b50;
+      background: #0d2c52;
+      float: right;
+    }
+  }
+  &__name{
+    width:100%;
+    display: block;
+    background: #deedff;
+    border: solid 2px #6c9bd2;
+    font-size: 2em;
+    color: #0d1f26;
+    box-sizing: border-box;
+  }
+  &__textarea{
+    width:100%;
+    height: 80%;
+    display: block;
+    background: #deedff;
+    border: solid 2px #6c9bd2;
+    font-size: 2em;
+    color: #0d1f26;
+    resize: none;
+    box-sizing: border-box;
+  }
+}
+

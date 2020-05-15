@@ -1,0 +1,14 @@
+#l-board {
+  //background: #258c6d;
+  width: 980px;
+  margin: 0 auto;
+  @include pro() {
+    width: 600px;
+    @include ipad() {
+      width: 500px
+    }
+    @include sumaho() {
+      width: 100%;
+    }
+  }
+}

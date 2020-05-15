@@ -1,0 +1,56 @@
+{
+  "name": "react_sample01",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "audio-buffer": "^4.0.4",
+    "audio-context": "^1.0.3",
+    "audio-loader": "^1.0.3",
+    "audio-play": "^2.2.1",
+    "axois": "0.0.1-security",
+    "bootstrap": "^4.3.1",
+    "jquery": "^3.2.1",
+    "lodash": "^4.17.4",
+    "popper.js": "^1.15.0",
+    "vue": "^2.5.11",
+    "vue-audio": "0.0.12",
+    "vue-audio-visual": "^2.0.1"
+  },
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "7.1.1",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "browser-sync": "^2.18.13",
+    "browserify": "^14.5.0",
+    "classnames": "^2.2.5",
+    "eslint": "^4.12.1",
+    "eslint-plugin-react": "^7.5.1",
+    "gulp": "^3.9.1",
+    "gulp-eslint": "^4.0.0",
+    "gulp-notify": "^3.0.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-webpack": "^1.5.0",
+    "node-sass": "^4.11.0",
+    "prop-types": "^15.6.0",
+    "redux-devtools": "^3.4.1",
+    "vinyl-source-stream": "^1.1.0",
+    "vue-devtools": "^3.1.9",
+    "webpack": "^3.9.1",
+    "webpack-stream": "^4.0.0"
+  },
+  "babel": {
+    "presets": [
+      "env"
+    ]
+  },
+  "description": ""
+}
