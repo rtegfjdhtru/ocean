@@ -9,7 +9,7 @@ Vue.component('board-list', {
             <p class="c-board--container__date">{{date}}</p>
         </div>
     `,
-    props: ['name','text','date']
+    props: ['name', 'text', 'date', 'sendTime']
 })
 
 //親
@@ -22,42 +22,43 @@ Vue.component('board-form', {
             <textarea class="c-modal__textarea" placeholder="何か書いてみよう！" v-model="text"></textarea>
         </div>
     `,
-    data: function(){
-        return{
-            name:'',
-            text:''
+    data: function () {
+        return {
+            name: '',
+            text: ''
         }
     },
-    methods:{
-        send:function(){
+    methods: {
+        send: function () {
             //イベント発火　名前とテキストを渡す　送信後フォーム削除
-            this.$emit('input',this.name,this.text)
-            this.name =  ''
+            this.$emit('input', this.name, this.text)
+            this.name = ''
             this.text = ''
         }
     }
 })
 
 let board = new Vue({
-    el:'#l-board',
-    data:{
-        lists:[]
+    el: '#l-board',
+    data: {
+        lists: []
     },
     //firebaseからデータ取得
-    created: function(){
+    created: function () {
         let vue = this;
-        firebase.database().ref('board').on('value', function(snapshot) {
+        firebase.database().ref('ocean').on('value', function (snapshot) {
             vue.lists = snapshot.val();
         });
     },
     //データ送信
-    methods:{
-        send:function(name,text){
+    methods: {
+        send: function (name, text) {
             let now = new Date();
-            firebase.database().ref('board').push({
-                name:name,
-                text:text,
-                date:now.getMonth()+1 + '月'+ now.getDate() + '日' + now.getHours() + ':' + now.getMinutes()
+            firebase.database().ref('ocean').push({
+                name: name,
+                text: text,
+                date: now.getMonth() + 1 + '月' + now.getDate() + '日' + now.getHours() + ':' + now.getMinutes(),
+                sendTime: now.getTime()
             })
         }
     }
