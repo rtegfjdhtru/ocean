@@ -8,6 +8,31 @@
     <link href="https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="src/css/style.css">
     <link href="fontawesome-free-5.9.0-web/css/all.css" rel="stylesheet">
+<!--     The core Firebase JS SDK is always required and must be listed first-->
+    <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-database.js"></script>
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyAy02n9XFH0lw4VZNasoYQInPNbk5MzWjM",
+            authDomain: "test-board-fd165.firebaseapp.com",
+            databaseURL: "https://test-board-fd165.firebaseio.com",
+            projectId: "test-board-fd165",
+            storageBucket: "test-board-fd165.appspot.com",
+            messagingSenderId: "1099488959311",
+            appId: "1:1099488959311:web:31414c5235dac538dcc33a",
+            measurementId: "G-YRBKY46ZK8"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+
+    </script>
 </head>
 
 <body>
@@ -20,19 +45,19 @@
             </a>
         </div>
     </header>
-    <section id="l-board">
 
-        <board-list v-for="list in lists"
+
+    <section id="l-board">
+        <board-list v-for="(list,key) in lists"
+                    v-bind:key="key"
                     v-bind:name="list.name"
                     v-bind:text="list.text"
                     v-bind:date="list.date">
         </board-list>
-
         <!--    モーダル-->
         <div class="c-modal-cover active--modal">
             <board-form v-on:input="send"></board-form>
         </div>
-
     </section>
 
     <span id="fab" class="js-fbaBtn">
@@ -42,3 +67,4 @@
 <script src="dist/js/bundle.js"></script>
 </body>
 </html>
+
