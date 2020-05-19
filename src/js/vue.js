@@ -1,6 +1,6 @@
 import Vue from 'vue';
 
-//子
+
 Vue.component('board-list', {
     template: `
         <div class="c-board--container">
@@ -12,7 +12,7 @@ Vue.component('board-list', {
     props: ['name', 'text', 'date', 'sendTime']
 })
 
-//親
+
 Vue.component('board-form', {
     template: `
         <div class="c-modal">
@@ -63,3 +63,36 @@ let board = new Vue({
         }
     }
 })
+//
+// Vue.component('my-area',{
+//     template:`
+//     <button v-on:click="handelClick">イベント発火ボタン</button>
+//     `,
+//     data:function(){
+//         return{
+//         }
+//     },
+//     methods:{
+//         handelClick:function(){
+//             this.$emit('child-event')
+//         }
+//     }
+//
+// })
+// Vue.component('area-chlid',{
+//     template:'<p>{{val}}</p>',
+//     props:['val']
+// })
+//
+// new Vue({
+//     el:'#app2',
+//     data:{
+//         count:0,
+//     },
+//     methods:{
+//         prentsMethod:function(){
+//             alert('あいうえお')
+//         }
+//     }
+// })
+
